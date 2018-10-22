@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  worker:
+    image: gitlab/gitlab-runner:latest
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "runner_data_0:/etc/gitlab-runner:rw"
+      - "runner_data_1:/home/gitlab-runner:rw"
+    restart: unless-stopped
+
+volumes:
+  runner_data_0: {}
+  runner_data_1: {}

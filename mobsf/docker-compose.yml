@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  server:
+    image: opensecurity/mobile-security-framework-mobsf:latest
+    volumes:
+      - "mobsf_data:/root/.MobSF:rw"
+    ports:
+      - "82:8000"
+    restart: unless-stopped
+
+volumes:
+  mobsf_data: {}
