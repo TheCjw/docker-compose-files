@@ -5,7 +5,7 @@ services:
     image: postgres:10-alpine
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: changeme
+      POSTGRES_PASSWORD: postgres
     volumes:
       - "pg_data:/var/lib/postgresql/data/:rw"
     ports:
